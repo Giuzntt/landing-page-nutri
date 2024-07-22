@@ -6,6 +6,18 @@ import CardSell from "./components/CardSell";
 function App() {
   const [hasMenuOpen, setHasMenuOpen] = useState(false);
 
+  const handleScrollTo = (id: string) => {
+    const element = document.getElementById(id);
+
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+
+      if (hasMenuOpen) {
+        setHasMenuOpen(false);
+      }
+    }
+  };
+
   return (
     <>
       <header
@@ -23,17 +35,29 @@ function App() {
           <div className="hidden md:block">
             <ul className="flex items-center space-x-8 text-white">
               <li>
-                <a href="#sobre" className="hover:text-greenlanding-400">
+                <a
+                  href="#sobre"
+                  className="hover:text-greenlanding-400"
+                  onClick={() => handleScrollTo("sobre")}
+                >
                   Sobre
                 </a>
               </li>
               <li>
-                <a href="#servicos" className="hover:text-greenlanding-400">
+                <a
+                  href="#servicos"
+                  className="hover:text-greenlanding-400"
+                  onClick={() => handleScrollTo("servicos")}
+                >
                   E-book
                 </a>
               </li>
               <li>
-                <a href="#contato" className="hover:text-greenlanding-400">
+                <a
+                  href="#contato"
+                  className="hover:text-greenlanding-400"
+                  onClick={() => handleScrollTo("contato")}
+                >
                   Contato
                 </a>
               </li>
@@ -75,21 +99,21 @@ function App() {
                 <a
                   href="#sobre"
                   className="hover:text-greenlanding-400"
-                  onClick={() => setHasMenuOpen(false)}
+                  onClick={() => handleScrollTo("sobre")}
                 >
                   Sobre
                 </a>
                 <a
                   href="#servicos"
                   className="hover:text-greenlanding-400"
-                  onClick={() => setHasMenuOpen(false)}
+                  onClick={() => handleScrollTo("servicos")}
                 >
                   E-book
                 </a>
                 <a
                   href="#contato"
                   className="hover:text-greenlanding-400"
-                  onClick={() => setHasMenuOpen(false)}
+                  onClick={() => handleScrollTo("contato")}
                 >
                   Contato
                 </a>
@@ -100,7 +124,7 @@ function App() {
       </header>
 
       <section className="bg-gradient-to-r from-greenlanding-300 via-greenlanding-500 to-greenlanding-400 h-full w-full relative">
-        <section className="py-10 sm:py-16 lg:py-24">
+        <section className="py-10 sm:py-16 lg:py-24" id="sobre">
           <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
             <div
               className="grid items-center grid-cols-1 gap-12 lg:grid-cols-2 xs:mt-12
@@ -112,7 +136,11 @@ function App() {
                   NUTRICIONISTA INFANTIL
                 </div>
 
-                <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-greenlanding-900">
+                <h1
+                  className="text-3xl sm:text-4xl lg:text-5xl font-bold text-greenlanding-900 xs:text-center md:text-left sm:text-left xs:text-2xl 
+                
+                "
+                >
                   Beatriz de Lima Siqueira
                 </h1>
 
@@ -127,7 +155,10 @@ function App() {
                   melhorando a saúde das crianças.
                 </p>
 
-                <div className="mt-10 flex flex-col md:items-start md:justify-start">
+                <div
+                  className="mt-10 flex flex-col md:items-start md:justify-start"
+                  id="contato"
+                >
                   <a
                     href="https://www.instagram.com/nutri.biasl12"
                     className="flex items-center mb-4 sm:mb-0 sm:mr-4"
@@ -277,7 +308,7 @@ function App() {
         </section>
       </section>
 
-      <section className="py-10 bg-gray-50 sm:py-16 lg:py-24">
+      <section className="py-10 bg-gray-50 sm:py-16 lg:py-24" id="servicos">
         <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
           <div className=" mx-auto text-center">
             <div className="flex items-start justify-center flex-col ">
