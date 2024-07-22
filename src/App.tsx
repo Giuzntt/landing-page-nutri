@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { FaInstagram, FaWhatsapp } from "react-icons/fa";
 import TextCard from "./components/Textcard";
+import CardSell from "./components/CardSell";
 
 function App() {
   const [hasMenuOpen, setHasMenuOpen] = useState(false);
@@ -101,7 +102,11 @@ function App() {
       <section className="bg-gradient-to-r from-greenlanding-300 via-greenlanding-500 to-greenlanding-400 h-full w-full relative">
         <section className="py-10 sm:py-16 lg:py-24">
           <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
-            <div className="grid items-center grid-cols-1 gap-12 lg:grid-cols-2">
+            <div
+              className="grid items-center grid-cols-1 gap-12 lg:grid-cols-2 xs:mt-12
+            
+            "
+            >
               <div>
                 <div className="flex items-center justify-center w-full h-14 rounded-full bg-greenlanding-400 uppercase text-white font-semibold text-lg sm:text-xl lg:text-2xl tracking-widest my-4 sm:my-10">
                   NUTRICIONISTA INFANTIL
@@ -163,20 +168,24 @@ function App() {
             <img
               src="/melancia.webp"
               alt="melancia nutricionista"
-              className="absolute bottom-[-50px] left-[15%] right-0  w-[270.1px] h-[144.1px]"
+              className="absolute bottom-[-20vh] left-[10%] right-0 w-[50vw] h-auto max-w-[270px] max-h-[144px] melancia"
             />
           </div>
 
           <div className="flex items-center justify-center flex-col px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
-            <h5 className="text-base  font-semibold text-greenlanding-900">
+            <h5 className="text-base  font-semibold text-greenlanding-900 xs:text-center md:text-center sm:text-center">
               Compreendendo e Lidando com a Recusa de Alimentos
             </h5>
-            <h2 className="text-6xl font-bold text-white">
+            <h2
+              className="text-6xl font-bold text-white xs:text-center md:text-center sm:text-center xs:text-5xl
+            
+            "
+            >
               Seletividade Alimentar
             </h2>
 
             <p
-              className="mt-8 text-lg text-white text-wrap text-center max-w-3xl
+              className="mt-8 text-lg text-white text-wrap text-center max-w-3xl xs:text-justify sm:text-justify md:text-justify lg:text-center
             
             "
             >
@@ -200,20 +209,26 @@ function App() {
           <div className="relative">
             <img
               src="/banana.png"
-              alt="melancia nutricionista"
-              className="absolute bottom-[-50px] right-[15%]  w-[240.6px] h-[283.9px]"
+              alt="banana nutricionista"
+              className="absolute bottom-[-50px] right-[15%] w-[240.6px] h-[283.9px] max-w-[240.6px] max-h-[283.9px] 
+             xs:bottom-[-30px] xs:right-[10%] 
+             sm:bottom-[-40px] sm:right-[12%] 
+             md:bottom-[-50px] md:right-[15%] banana"
             />
           </div>
 
           <div className="flex items-start justify-center flex-col px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
-            <h5 className="text-3xl  font-semibold text-greenlanding-900 ">
+            <h5 className="text-3xl  font-semibold text-greenlanding-900  xs:text-center">
               Descubra se seu filho está passando por isso.
             </h5>
           </div>
 
           {/* create grid 3 cols */}
 
-          <div className="grid grid-cols-3 gap-8 px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+          <div
+            className="grid grid-cols-1 gap-8 px-4 mx-auto max-w-7xl sm:px-6 lg:px-8 sm:grip-cols-1 lg:grid-cols-3
+          "
+          >
             <div className="flex items-center justify-center flex-col gap-5 my-4">
               <TextCard
                 subtitle="Criança que só come alimentos brancos"
@@ -259,70 +274,65 @@ function App() {
               className="w-24 h-24 rotate-90 my-8"
             />
           </div>
-
-          <div className="flex items-start justify-center flex-col px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
-            <h5 className="text-3xl  font-semibold text-white ">
-              A seletividade alimentar pode ser um desafio, mas é possível
-              superá-la. Com nossos E-books, você terá acesso a informações
-              valiosas e dicas práticas para lidar com a recusa de alimentos e
-              promover uma alimentação saudável e equilibrada para seu filho.
-            </h5>
-          </div>
-
-          <div className="grid grid-cols-2 gap-8 px-4 mx-auto max-w-7xl sm:px-6 lg:px-8 my-14 place-items-center">
-            <div className="max-w-sm rounded overflow-hidden shadow-lg bg-white ">
-              <img
-                className="w-full"
-                src="/livro-introducao.png"
-                alt="Sunset in the mountains"
-              />
-              <div className="px-6 py-4">
-                <div className="font-bold text-xl mb-2 text-greenlanding-700">
-                  Introdução Alimentar
-                </div>
-                <p className="text-gray-700 text-base text-justify">
-                  Descubra como introduzir alimentos de forma segura e saudável
-                  para seu bebê.
-                </p>
-              </div>
-              <div className="px-6 pt-4 pb-2 flex justify-end ">
-                <span className="inline-block bg-greenlanding-500 rounded-lg px-3 py-4 text-sm font-semibold text-white mr-2 mb-2">
-                  Quero saber mais
-                </span>
-              </div>
-            </div>
-
-            <div
-              className="max-w-sm rounded overflow-hidden shadow-lg
-              bg-white 
-            "
-            >
-              <img
-                className="w-full"
-                src="/livro-seletividade.png"
-                alt="Sunset in the mountains"
-              />
-              <div className="px-6 py-4">
-                <div className="font-bold text-xl mb-2 text-greenlanding-700">
-                  Selevidade Alimentar
-                </div>
-                <p className="text-gray-700 text-base text-justify">
-                  Aprenda a lidar com a recusa de alimentos e promova uma
-                  alimentação saudável para seu filho.
-                </p>
-              </div>
-              <div
-                className="px-6 pt-4 pb-2
-              
-                flex justify-end "
-              >
-                <span className="inline-block bg-greenlanding-500 rounded-lg px-3 py-4 text-sm font-semibold text-white mr-2 mb-2">
-                  Quero saber mais
-                </span>
-              </div>
-            </div>
-          </div>
         </section>
+      </section>
+
+      <section className="py-10 bg-gray-50 sm:py-16 lg:py-24">
+        <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
+          <div className=" mx-auto text-center">
+            <div className="flex items-start justify-center flex-col ">
+              <h5
+                className="text-2xl  font-semibold text-greenlanding-800 text-center
+             "
+              >
+                A seletividade alimentar pode ser um desafio, mas é possível
+                superá-la. Com nossos E-books, você terá acesso a informações
+                valiosas e dicas práticas para lidar com a recusa de alimentos e
+                promover uma alimentação saudável e equilibrada para seu filho.
+              </h5>
+            </div>
+          </div>
+
+          <div className="grid  grid-cols-1 gap-6 mx-auto sm:grid-cols-3 mt-14 md:gap-9">
+            <CardSell
+              imageURL={{
+                src: "/livro-seletividade.png",
+                alt: "E-book Seletividade Alimentar",
+              }}
+              description={`Este e-book oferece uma abordagem prática e compreensiva para entender e manejar a seletividade alimentar, um desafio comum que afeta muitas famílias. É essencial para pais, cuidadores e profissionais da saúde que lidam com crianças seletivas.`}
+              price={39.99}
+              benefits={[
+                { name: "Introdução à Seletividade Alimentar", included: true },
+                { name: "Fatores Sensoriais", included: true },
+                { name: "Estratégias Alimentares", included: true },
+                { name: "Recursos Nutricionais", included: true },
+                { name: "Receitas Inclusivas", included: true },
+                { name: "Montagem de uma lancheira", included: true },
+              ]}
+              buttonText="Comprar"
+            />
+
+            <CardSell
+              imageURL={{
+                src: "/livro-introducao.png",
+                alt: "E-book Introdução Alimentar",
+              }}
+              description={`Este e-book é essencial para pais e cuidadores que desejam garantir uma alimentação saudável e equilibrada desde os primeiros meses de vida. Com orientação claras e práticas, voce estará preparado para proporcionar uma experiencia alimentar positiva e nutritiva para seu bebê.`}
+              price={39.99}
+              benefits={[
+                { name: "Introdução Alimentar", included: true },
+                { name: "Evolução das Texturas", included: true },
+                { name: "Frutas na Introdução Alimentar", included: true },
+
+                { name: "Método BLW", included: true },
+                { name: "Cortes Seguros", included: true },
+                { name: "Receitas Nutricionais", included: true },
+              ]}
+              buttonText="Comprar"
+              color="red"
+            />
+          </div>
+        </div>
       </section>
     </>
   );

@@ -27,3 +27,39 @@
     }
   }
 }
+
+body {
+  @media (max-width: 639px) {
+    /* xs */
+    .melancia {
+      left: 5px;
+      top: -60px;
+      width: 100px;
+    }
+
+    .banana {
+      right: 10px;
+      top: -170px;
+      width: 170px;
+      height: 170px;
+    }
+  }
+
+  @media (min-width: 640px) {
+    /* sm */
+    .melancia {
+      bottom: -15vh;
+      left: 12%;
+    }
+  }
+
+  @media (min-width: 768px) {
+    /* md */
+    .melancia {
+      bottom: -10vh;
+      left: 15%;
+    }
+  }
+}
+
+/* Continue adicionando media queries conforme necessário */
