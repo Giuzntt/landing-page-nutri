@@ -348,7 +348,7 @@ function App() {
                 src: "/livro-introducao.png",
                 alt: "E-book Introdução Alimentar",
               }}
-              description={`Este e-book é essencial para pais e cuidadores que desejam garantir uma alimentação saudável e equilibrada desde os primeiros meses de vida. Com orientação claras e práticas, voce estará preparado para proporcionar uma experiencia alimentar positiva e nutritiva para seu bebê.`}
+              description={`Este e-book é essencial para pais e cuidadores que desejam garantir uma alimentação saudável e equilibrada desde os primeiros meses de vida. Com orientações claras e práticas, você estará preparado para proporcionar uma experiência alimentar positiva e nutritiva para seu bebê.`}
               price={39.99}
               benefits={[
                 { name: "Introdução Alimentar", included: true },
