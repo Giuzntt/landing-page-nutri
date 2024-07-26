@@ -91,9 +91,9 @@ const CardSell: React.FC<CardProps> = ({
         <a
           href={buttonHref}
           target="_blank"
-          // border-2 rounded-full border-greenlanding-600 hover:bg-greenlanding-600 hover:text-white focus:text-white focus:bg-greenlanding-600"
-
-          className="inline-flex items-center justify-center w-full px-3 py-2 mt-4 font-semibold text-white transition-all duration-200 bg-greenlanding-600 rounded-full hover:bg-greenlanding-700 hover:text-white focus:text-white focus:bg-greenlanding-700"
+          className="inline-flex items-center justify-center w-full px-3 py-2 mt-4 font-semibold text-white transition-all duration-200 bg-greenlanding-600 rounded-full hover:bg-greenlanding-700 hover:text-white focus:text-white focus:bg-greenlanding-700
+            cursor-pointer
+          "
         >
           {buttonText}
         </a>
