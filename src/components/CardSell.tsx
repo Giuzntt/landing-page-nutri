@@ -16,6 +16,9 @@ type CardProps = {
   benefits: Benefit[];
   buttonText: string;
   color?: string;
+  isDiscounted?: boolean;
+  valueDiscount?: number;
+  buttonHref?: string;
 };
 
 const CardSell: React.FC<CardProps> = ({
@@ -25,51 +28,79 @@ const CardSell: React.FC<CardProps> = ({
   frequency,
   benefits,
   buttonText,
+  isDiscounted,
+  valueDiscount,
+  buttonHref,
 }) => {
   return (
-    <div className="overflow-hidden bg-transparent border-2 border-gray-200 rounded-md">
+    <div
+      className={`overflow-hidden bg-white border-2 border-gray-200 rounded-md
+      ${isDiscounted && "shadow-lg border-green-600 border-2"}
+    
+    `}
+    >
       <img
-        className="object-cover w-full h-48 rounded-md  d-block filter drop-shadow-lg my-5"
+        className="object-cover w-full h-72 mx-auto max-h-72
+        
+        "
         src={imageURL.src}
         alt={imageURL.alt}
       />
       <div
-        className="p-3 h-full bg-white
+        className="p-2 bg-white flex flex-col  h-full
+      
       "
       >
-        <h3 className="text-xl font-semibold text-gray-900">{imageURL.alt}</h3>
-        <p className="mt-2.5 text-sm text-gray-600 text-justify">
-          {description}
-        </p>
-        <div className="flex items-end mt-5">
+        <div
+          className="flex items-start flex-col
+        "
+        >
+          <h3 className="text-lg font-semibold text-gray-900">
+            {imageURL.alt}
+          </h3>
+          <p className="mt-2 text-xs text-gray-600 text-justify">
+            {description}
+          </p>
+        </div>
+        <div className="flex items-end mt-6">
           <div className="flex items-start">
-            <span
-              className={`text-xl font-medium rounded-full text-white bg-greenlanding-600 px-3 mx-1.5`}
-            >
-              R${" "}
+            <span className="text-lg font-medium rounded-full text-white bg-greenlanding-600 px-2 mx-1">
+              R$
             </span>
-            <p className="text-6xl font-medium tracking-tight">
-              {" "}
+            <p
+              className="text-4xl font-medium tracking-tight  text-gray-900rounded-full px-2 mx-1
+            "
+            >
               {new Intl.NumberFormat("pt-BR", {
+                style: "currency",
                 currency: "BRL",
               }).format(price)}
             </p>
+
+            {valueDiscount && (
+              <p
+                className="text-sm font-medium tracking-tight bg-red-500 text-white rounded-full px-2 mx-1
+            "
+              >
+                {valueDiscount}% OFF
+              </p>
+            )}
           </div>
-          <span className="ml-0.5 text-lg text-gray-600">{frequency}</span>
+          <span className="ml-0.5 text-base text-gray-600">{frequency}</span>
         </div>
         <a
-          href="#"
-          className="inline-flex items-center justify-center w-full px-4 py-3 mt-6 font-semibold text-gray-900 transition-all duration-200 bg-transparent border-2 rounded-full border-greenlanding-600 hover:bg-greenlanding-600 hover:text-white focus:text-white focus:bg-greenlanding-600"
-          role=""
+          href={buttonHref}
+          target="_blank"
+          className="inline-flex items-center justify-center w-full px-3 py-2 mt-4 font-semibold text-gray-900 transition-all duration-200 bg-transparent border-2 rounded-full border-greenlanding-600 hover:bg-greenlanding-600 hover:text-white focus:text-white focus:bg-greenlanding-600"
         >
           {buttonText}
         </a>
-        <ul className="flex flex-col mt-8 space-y-4">
+        <ul className="flex flex-col mt-6 space-y-3">
           {benefits.map((benefit, index) => (
-            <li key={index} className="inline-flex items-center space-x-2">
+            <li key={index} className="inline-flex items-center space-x-1.5">
               {benefit.included ? (
                 <svg
-                  className="flex-shrink-0 w-5 h-5 text-gray-400"
+                  className="flex-shrink-0 w-4 h-4 text-gray-400"
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 20 20"
                   fill="currentColor"
@@ -82,7 +113,7 @@ const CardSell: React.FC<CardProps> = ({
                 </svg>
               ) : (
                 <svg
-                  className="flex-shrink-0 w-5 h-5 text-gray-400"
+                  className="flex-shrink-0 w-4 h-4 text-gray-400"
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 20 20"
                   fill="currentColor"
@@ -95,7 +126,7 @@ const CardSell: React.FC<CardProps> = ({
                 </svg>
               )}
               <span
-                className={`text-base font-medium ${
+                className={`text-sm font-medium ${
                   benefit.included ? "text-gray-900" : "text-gray-400"
                 }`}
               >
