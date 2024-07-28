@@ -392,7 +392,7 @@ function App() {
               ]}
               buttonText="Comprar"
               color="red"
-              buttonHref="https://pay.hotmart.com/I94517141E?checkoutMode=10&bid=1722125381780"
+              buttonHref="https://pay.hotmart.com/R94619633P?off=gx2gbrd5&checkoutMode=10"
             />
           </div>
         </div>
