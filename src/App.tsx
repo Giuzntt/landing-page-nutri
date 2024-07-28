@@ -344,6 +344,7 @@ function App() {
                 { name: "Montagem de uma lancheira", included: true },
               ]}
               buttonText="Comprar"
+              buttonHref="https://pay.hotmart.com/B94224108F?checkoutMode=10&bid=1722125380623"
             />
 
             <CardSell
@@ -370,6 +371,7 @@ function App() {
               isDiscounted
               valueDiscount={10}
               buttonText="Comprar"
+              buttonHref="https://pay.hotmart.com/O94619339K?off=dv7bf5q5&checkoutMode=10&bid=1722125380344"
             />
 
             <CardSell
@@ -390,6 +392,7 @@ function App() {
               ]}
               buttonText="Comprar"
               color="red"
+              buttonHref="https://pay.hotmart.com/I94517141E?checkoutMode=10&bid=1722125381780"
             />
           </div>
         </div>
