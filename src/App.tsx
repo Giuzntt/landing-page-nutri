@@ -172,13 +172,13 @@ function App() {
                   </a>
 
                   <a
-                    href="https://wa.me/5564981126558"
+                    href="https://wa.me/5511965343316"
                     className="flex items-center"
                     target="_blank"
                   >
                     <FaWhatsapp className="mr-2 text-white text-2xl" />
                     <p className="text-greenlanding-900 text-lg sm:text-xl">
-                      (64) 98112-6558
+                      (11) 96534-3316
                     </p>
                   </a>
                 </div>
