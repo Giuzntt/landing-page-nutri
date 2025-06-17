@@ -405,7 +405,7 @@ function App() {
               <img
                 className="w-auto mx-auto h-12"
                 src="/logo-nutricionista.png"
-                alt=""
+                alt="Logotipo Nutricionista Beatriz de Lima Siqueira"
               />
             </div>
             <div className="items-center mt-8 xl:mt-0 xl:flex xl:justify-end xl:space-x-8">
